@@ -11,29 +11,32 @@ player_1_input = player_1_input.toLowerCase()
 player_2_input = player_2_input.toLowerCase()
 
 
-if ((player_1_input !== 'rock' || player_1_input !== 'paper' || player_1_input !== 'scissors') || (player_2_input !== 'rock' || player_2_input !== 'paper' || player_2_input !== 'scissors'))
-if(player_1_input === 'rock'){
-    if(player_2_input === 'rock'){
-        console.log('Draw')
-    } else if(player_2_input === 'paper'){
-        console.log('Player 2 wins!')
-    } else {
-        console.log('Player 1 wins!')
+if ((player_1_input === 'rock' || player_1_input === 'paper' || player_1_input === 'scissors') && (player_2_input === 'rock' || player_2_input === 'paper' || player_2_input === 'scissors')){
+    if(player_1_input === 'rock'){
+        if(player_2_input === 'rock'){
+            console.log('Draw')
+        } else if(player_2_input === 'paper'){
+            console.log('Player 2 wins!')
+        } else {
+            console.log('Player 1 wins!')
+        }
+    } else if(player_1_input === 'paper'){
+        if(player_2_input === 'paper'){
+            console.log('Draw')
+        } else if(player_2_input === 'scissors'){
+            console.log('Player 2 wins!')
+        } else {
+            console.log('Player 1 wins!')
+        }
+    } else if(player_1_input === 'scissors'){
+        if(player_2_input === 'scissors'){
+            console.log('Draw')
+        } else if(player_2_input === 'rock'){
+            console.log('Player 2 wins!')
+        } else {
+            console.log('Player 1 wins!')
+        }
     }
-} else if(player_1_input === 'paper'){
-    if(player_2_input === 'paper'){
-        console.log('Draw')
-    } else if(player_2_input === 'scissors'){
-        console.log('Player 2 wins!')
-    } else {
-        console.log('Player 1 wins!')
-    }
-} else if(player_1_input === 'scissors'){
-    if(player_2_input === 'scissors'){
-        console.log('Draw')
-    } else if(player_2_input === 'rock'){
-        console.log('Player 2 wins!')
-    } else {
-        console.log('Player 1 wins!')
-    }
+} else {
+    console.log('Invalid input. Try again')
 }
