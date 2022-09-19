@@ -10,6 +10,8 @@ console.log(player_2_input)
 player_1_input = player_1_input.toLowerCase()
 player_2_input = player_2_input.toLowerCase()
 
+
+if ((player_1_input !== 'rock' || player_1_input !== 'paper' || player_1_input !== 'scissors') || (player_2_input !== 'rock' || player_2_input !== 'paper' || player_2_input !== 'scissors'))
 if(player_1_input === 'rock'){
     if(player_2_input === 'rock'){
         console.log('Draw')
